@@ -52,7 +52,7 @@ public class ExampleRestController {
         var example = new Example();
         example.setItem(exampleDto.getItem());
         response.setContent(ExampleMapper.toDto(exampleRepository.save(example)));
-        return ResponseEntity.ok(response);
+        return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
 
     /***

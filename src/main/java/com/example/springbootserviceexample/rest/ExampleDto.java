@@ -19,4 +19,12 @@ public class ExampleDto   {
     public void setItem(String item) {
         this.item = item;
     }
+
+    @Override
+    public String toString() {
+        return "ExampleDto{" +
+                "id=" + id +
+                ", item='" + item + '\'' +
+                '}';
+    }
 }
